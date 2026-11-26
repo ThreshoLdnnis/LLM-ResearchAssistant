@@ -36,7 +36,8 @@ BGE 编码器使用固定修订版的 ONNX 量化权重，可通过 HF_ENDPOINT 
 LLM 通过兼容 Chat Completions 的服务接入。默认地址为本机 8080 端口。以下是使用 llama.cpp **另开终端启动服务后**的示例，模型文件由使用者下载。参考实验使用 Qwen2.5 Instruct 的 Q4_K_M 版本及 llama.cpp b12780。公共模型链接见实验报告。网页仅在勾选生成模式后调用模型，命令行使用 `--generate`。
 
 ```powershell
-llama-server -m path/to/qwen2.5-1.5b-instruct-q4_k_m.gguf --host 127.0.0.1 --port 8080 -c 4096 -t 5 -np 1 --alias local
+python -m scripts.fetch_llm 1.5
+llama-server -m data/models/qwen2.5-1.5b-instruct-q4_k_m.gguf --host 127.0.0.1 --port 8080 -c 4096 -t 5 -np 1 --alias local
 ```
 
 ```powershell
@@ -56,11 +57,13 @@ python -m bench.score_answers
 python -m bench.generate data/local/new-model.json
 ```
 
-最后一条使用当前配置的模型生成新输出。发布的评分绑定到已审阅输出的哈希，换模型或重新生成后需要逐题重新评分。建议用只含四份样本的库复现生成实验。
+最后一条使用当前配置的模型生成新输出。检索和生成实验都按来源清单锁定四份样本及文件哈希。发布的评分绑定到已审阅输出的哈希，换模型或重新生成后需要逐题重新评分。
 
 | 从哪里看 | 内容 |
 |---|---|
 | [学习路线](docs/MENTOR.md) | 从手工核数到独立设计外部验证集 |
+| [系统评估](docs/EVALUATION.md) | 分母、指标、配置、延迟、成本与逐项复核步骤 |
+| [实证论文](docs/PAPER.md) | 研究假设、实验设计、结果解释与外部效度 |
 | [实证研究报告](docs/STUDY.md) | 研究问题、对照实验、答案审阅、失败案例、外推边界 |
 | [系统实现](finrag) | PDF 入库、检索、生成、指标与年度序列 |
 | [评测集与评分](bench) | 页码相关性、财务单元格、答案与引文标注 |

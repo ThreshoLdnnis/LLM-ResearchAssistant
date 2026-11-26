@@ -8,7 +8,8 @@ from time import perf_counter
 import numpy as np
 from finrag.extract import financial
 from finrag.search import Search, chunks, MODES, REV, encoder
-from finrag.store import ROOT, pages
+from finrag.store import ROOT
+from .corpus import frozen_pages
 
 
 def measure(hits, groups):
@@ -21,9 +22,7 @@ def measure(hits, groups):
 def run(folder):
     folder.mkdir(exist_ok=True,parents=True)
     qs = json.loads((ROOT/"bench/questions.json").read_text(encoding="utf8"))
-    rows = [row for row in pages() if row[0]["id"] in {"cmb-fy24","cmb-q324","cmb-note","cmb-div"}]
-    if len(rows)!=51:
-        raise ValueError("实验需要清单中全部四份文档，请运行 python -m finrag demo")
+    rows = frozen_pages()
     details, summary = [], []
     for strategy,tables in [("structure",True),("fixed",True),("semantic",True),("structure",False)]:
         engine = Search(chunks(rows,strategy,tables))

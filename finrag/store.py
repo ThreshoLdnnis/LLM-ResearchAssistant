@@ -39,6 +39,9 @@ def connection(path=DB):
 
 def ingest(pdf, meta, database=DB):
     digest = sha256(pdf).hexdigest()
+    if "id" not in meta:
+        known = json.loads(MANIFEST.read_text(encoding="utf8"))
+        meta = next((d for d in known if d["sha256"]==digest),meta)
     key = meta.get("id", digest[:20])
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,80}", key):
         raise ValueError("无效文档 ID")

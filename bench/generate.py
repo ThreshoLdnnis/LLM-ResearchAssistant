@@ -5,11 +5,12 @@ import json
 from pathlib import Path
 from finrag.answer import ask
 from finrag.search import Search, chunks
-from finrag.store import ROOT, LOCAL, pages
+from finrag.store import ROOT, LOCAL
+from .corpus import frozen_pages
 
 
 def run(output):
-    engine = Search(chunks(pages()))
+    engine = Search(chunks(frozen_pages()))
     engine.prepare_dense()
     questions = json.loads((ROOT/"bench/qa.json").read_text(encoding="utf8"))
     rows, details = [], []

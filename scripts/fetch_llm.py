@@ -1,6 +1,5 @@
 """Fetch known GGUF weights for the two local research runs."""
 import argparse
-from hashlib import sha256
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 import os

@@ -47,7 +47,7 @@ def period_columns(line):
 
 
 def financial(meta, page, layout, tables=True):
-    columns, currency, scope = [], None, None
+    columns, scale, denomination, scope = [], None, None, None
     output = []
     for line in layout.splitlines():
         line = line.strip()
@@ -58,7 +58,8 @@ def financial(meta, page, layout, tables=True):
             scope = "母公司"
         unit_match = MONEY.search(compact)
         if unit_match:
-            currency = unit_match[1]
+            scale = unit_match[1]
+            denomination = "CNY" if "人民币" in compact else None
         parts = fields(line)
         if len(re.findall(r"(?:19|20)\d{2}年",compact)) >= 2:
             columns = period_columns(line)
@@ -68,15 +69,16 @@ def financial(meta, page, layout, tables=True):
         if "按季度" in compact or "季度" in compact and any(c in compact for c in "一二三四"):
             columns = []
         base = {"doc": meta["id"], "page": page, "company": meta["company"], "source_type": meta["type"],
-                "scope": scope, "quote": line}
+                "report_year": meta["year"],"published":meta["published"],"scope": scope, "quote": line}
         if tables and columns and len(parts) == len(columns) + 1 and parts[0] in LABELS:
             label = parts[0]
             percent = "率" in label
             for period, cell in zip(columns, parts[1:]):
-                if period is None or not CELL.fullmatch(cell) or not (percent or currency):
+                if period is None or not CELL.fullmatch(cell) or not (percent or scale):
                     continue
                 output.append(dict(base, metric=LABELS[label], label=label, period=period,
-                                   value=number(cell), unit="%" if percent else currency,
+                                   value=number(cell), unit="%" if percent else scale,
+                                   currency=None if percent else denomination,
                                    evidence_type="table", header=header))
         elif len(parts) == 1 or "，" in line:
             # Keep period unresolved unless the sentence itself states a period.
@@ -87,7 +89,8 @@ def financial(meta, page, layout, tables=True):
                 periods = re.findall(r"20\d{2}年(?:\d{1,2}[-至]\d{1,2}月|第[一二三四]季度|度)?", before)
                 output.append(dict(base, metric=LABELS[match[1]], label=match[1],
                                    period=periods[-1] if periods else None, value=number(match[2]),
-                                   unit=match[3], evidence_type="inline"))
+                                   unit=match[3],currency=None if match[3]=="%" else denomination,
+                                   evidence_type="inline"))
     return output
 
 
@@ -98,6 +101,7 @@ def narratives(meta, page, layout):
             for category, pattern in CATEGORIES.items():
                 if re.search(pattern, sentence):
                     yield dict(doc=meta["id"], page=page, company=meta["company"],
-                               source_type=meta["type"], category=category, quote=sentence,
+                               source_type=meta["type"],report_year=meta["year"],published=meta["published"],
+                               category=category, quote=sentence,
                                status="候选原文，待复核")
 
