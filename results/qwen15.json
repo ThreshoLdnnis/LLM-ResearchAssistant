@@ -1,0 +1,188 @@
+[
+  {
+    "id": "a01",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 10284.65,
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 1158,
+      "total_tokens": 1179,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "412.58 亿元",
+        "doc": "cmb-div",
+        "page": 2,
+        "key": "cmb-div/p2/c1",
+        "quote_sha256": "bf102266b5229ff6f77d874d388a08fbead27c1e6714ba88f7ea3a0f0966f9ee"
+      }
+    ],
+    "retrieved": [
+      "cmb-div/p2/c1",
+      "cmb-div/p1/c2",
+      "cmb-div/p2/c3",
+      "cmb-div/p1/c1"
+    ]
+  },
+  {
+    "id": "a02",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 9511.2,
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 1203,
+      "total_tokens": 1220,
+      "prompt_tokens_details": {
+        "cached_tokens": 89
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "25户",
+        "doc": "cmb-fy24",
+        "page": 8,
+        "key": "cmb-fy24/p8/c1",
+        "quote_sha256": "53e80d8b7d8f92984b022f97cd02d118771e2754beb436d4417da55973ce450e"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p5/c1",
+      "cmb-fy24/p8/c1",
+      "cmb-q324/p3/c3",
+      "cmb-fy24/p6/c3"
+    ]
+  },
+  {
+    "id": "a03",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 8378.18,
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 1473,
+      "total_tokens": 1490,
+      "prompt_tokens_details": {
+        "cached_tokens": 98
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "92天",
+        "doc": "cmb-q324",
+        "page": 27,
+        "key": "cmb-q324/p27/c3",
+        "quote_sha256": "e1e6fec89da783a572af2b44516645ce836848494c3097015a777a237abeebd3"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p27/c1",
+      "cmb-q324/p27/c3",
+      "cmb-q324/p3/c3",
+      "cmb-fy24/p6/c1"
+    ]
+  },
+  {
+    "id": "a04",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 6915.51,
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 1226,
+      "total_tokens": 1241,
+      "prompt_tokens_details": {
+        "cached_tokens": 84
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "14",
+        "doc": "cmb-note",
+        "page": 1,
+        "key": "cmb-note/p1/c4",
+        "quote_sha256": "a7e0c5ba13c4c79aed1bdf03cdb0040ef8a45ba8930eacf38b2c8ad7a311ec50"
+      }
+    ],
+    "retrieved": [
+      "cmb-note/p1/c4",
+      "cmb-note/p1/c3",
+      "cmb-note/p1/c5",
+      "cmb-note/p1/c2"
+    ]
+  },
+  {
+    "id": "a05",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 4986.59,
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 917,
+      "total_tokens": 932,
+      "prompt_tokens_details": {
+        "cached_tokens": 84
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "否",
+        "doc": "cmb-q324",
+        "page": 22,
+        "key": "cmb-q324/p22/c3",
+        "quote_sha256": "335fece7ffc12a2570fd8a04430e45bc1deaa8c2370c9d741777082c40de4f28"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p1/c2",
+      "cmb-q324/p24/c3",
+      "cmb-q324/p22/c3",
+      "cmb-fy24/p2/c2"
+    ]
+  },
+  {
+    "id": "a06",
+    "generation": "qwen15",
+    "status": "answered",
+    "latency_ms": 2984.43,
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 454,
+      "total_tokens": 490,
+      "prompt_tokens_details": {
+        "cached_tokens": 88
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "139,294,146,602,148,391",
+        "doc": "cmb-fy24",
+        "page": 3,
+        "key": "cmb-fy24/p3/c7",
+        "quote_sha256": "15d335538d57e75009a451817404bdd95863bfab861e8fb928d5c12f043032eb"
+      }
+    ],
+    "retrieved": [
+      "cmb-fy24/p3/c7",
+      "cmb-fy24/p3/c8",
+      "cmb-fy24/p9/c5",
+      "cmb-fy24/p9/c6"
+    ]
+  }
+]

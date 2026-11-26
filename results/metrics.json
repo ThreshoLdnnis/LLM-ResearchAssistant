@@ -1,0 +1,211 @@
+{
+  "questions": 18,
+  "pages": 51,
+  "documents": 4,
+  "encoder_revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+  "python": "3.12.14",
+  "packages": {
+    "PyMuPDF": "2.2",
+    "numpy": "2.5.5",
+    "onnxruntime": "1.32.0",
+    "tokenizers": "0.23.3"
+  },
+  "retrieval": [
+    {
+      "strategy": "structure",
+      "tables": true,
+      "mode": "bm25",
+      "chunks": 213,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8796296296296297,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 0.7785,
+      "p95_ms": 1.10435
+    },
+    {
+      "strategy": "structure",
+      "tables": true,
+      "mode": "vector",
+      "chunks": 213,
+      "recall5": 0.8055555555555556,
+      "mrr5": 0.6703703703703704,
+      "complete5": 0.7222222222222222,
+      "p50_ms": 5.4105,
+      "p95_ms": 6.100499999999999
+    },
+    {
+      "strategy": "structure",
+      "tables": true,
+      "mode": "hybrid",
+      "chunks": 213,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.7564814814814815,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 7.549,
+      "p95_ms": 8.91305
+    },
+    {
+      "strategy": "structure",
+      "tables": true,
+      "mode": "rerank",
+      "chunks": 213,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8379629629629629,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 9.4085,
+      "p95_ms": 11.898899999999996
+    },
+    {
+      "strategy": "fixed",
+      "tables": true,
+      "mode": "bm25",
+      "chunks": 177,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8611111111111112,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 1.3025,
+      "p95_ms": 1.6487499999999995
+    },
+    {
+      "strategy": "fixed",
+      "tables": true,
+      "mode": "vector",
+      "chunks": 177,
+      "recall5": 0.75,
+      "mrr5": 0.5972222222222222,
+      "complete5": 0.6666666666666666,
+      "p50_ms": 6.804,
+      "p95_ms": 9.659599999999998
+    },
+    {
+      "strategy": "fixed",
+      "tables": true,
+      "mode": "hybrid",
+      "chunks": 177,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8027777777777778,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 6.3065,
+      "p95_ms": 8.4277
+    },
+    {
+      "strategy": "fixed",
+      "tables": true,
+      "mode": "rerank",
+      "chunks": 177,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8518518518518519,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 10.3035,
+      "p95_ms": 13.247349999999997
+    },
+    {
+      "strategy": "semantic",
+      "tables": true,
+      "mode": "bm25",
+      "chunks": 420,
+      "recall5": 0.9444444444444444,
+      "mrr5": 0.8722222222222222,
+      "complete5": 0.8888888888888888,
+      "p50_ms": 2.561,
+      "p95_ms": 3.2062999999999997
+    },
+    {
+      "strategy": "semantic",
+      "tables": true,
+      "mode": "vector",
+      "chunks": 420,
+      "recall5": 0.8055555555555556,
+      "mrr5": 0.6916666666666667,
+      "complete5": 0.7222222222222222,
+      "p50_ms": 6.522,
+      "p95_ms": 9.15965
+    },
+    {
+      "strategy": "semantic",
+      "tables": true,
+      "mode": "hybrid",
+      "chunks": 420,
+      "recall5": 0.8888888888888888,
+      "mrr5": 0.8009259259259259,
+      "complete5": 0.8333333333333334,
+      "p50_ms": 9.4,
+      "p95_ms": 12.579349999999998
+    },
+    {
+      "strategy": "semantic",
+      "tables": true,
+      "mode": "rerank",
+      "chunks": 420,
+      "recall5": 0.8888888888888888,
+      "mrr5": 0.8148148148148148,
+      "complete5": 0.8333333333333334,
+      "p50_ms": 10.276,
+      "p95_ms": 13.159549999999998
+    },
+    {
+      "strategy": "structure",
+      "tables": false,
+      "mode": "bm25",
+      "chunks": 201,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8796296296296297,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 0.9405,
+      "p95_ms": 1.6948499999999984
+    },
+    {
+      "strategy": "structure",
+      "tables": false,
+      "mode": "vector",
+      "chunks": 201,
+      "recall5": 0.8055555555555556,
+      "mrr5": 0.6935185185185185,
+      "complete5": 0.7222222222222222,
+      "p50_ms": 6.3675,
+      "p95_ms": 7.8349
+    },
+    {
+      "strategy": "structure",
+      "tables": false,
+      "mode": "hybrid",
+      "chunks": 201,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.7592592592592593,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 8.2805,
+      "p95_ms": 9.9774
+    },
+    {
+      "strategy": "structure",
+      "tables": false,
+      "mode": "rerank",
+      "chunks": 201,
+      "recall5": 0.8611111111111112,
+      "mrr5": 0.8425925925925926,
+      "complete5": 0.7777777777777778,
+      "p50_ms": 11.111,
+      "p95_ms": 12.60675
+    }
+  ],
+  "extraction": [
+    {
+      "tables": false,
+      "tp": 0,
+      "fp": 0,
+      "fn": 45,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "tables": true,
+      "tp": 27,
+      "fp": 0,
+      "fn": 18,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    }
+  ]
+}

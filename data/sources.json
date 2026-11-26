@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cmb-fy24",
+    "company": "招商银行",
+    "year": 2024,
+    "title": "2024年度报告摘要",
+    "type": "年报摘要",
+    "published": "2025-03-26",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-03-26/1222895153.PDF",
+    "sha256": "7c18dabfc09cad8385d8fafd41341db8795598b1b4b87f5e27f35e681e647e3c"
+  },
+  {
+    "id": "cmb-q324",
+    "company": "招商银行",
+    "year": 2024,
+    "title": "2024年第三季度报告（A股）",
+    "type": "季报",
+    "published": "2024-10-30",
+    "url": "https://static.cninfo.com.cn/finalpage/2024-10-30/1221556764.PDF",
+    "sha256": "8403202b28ac3d4e8039bea167996776115bb8a41bdf98ef2291c83d3a149840"
+  },
+  {
+    "id": "cmb-div",
+    "company": "招商银行",
+    "year": 2024,
+    "title": "2024年年度A股分红派息实施公告",
+    "type": "公告",
+    "published": "2025-07-04",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-07-04/1224071313.PDF",
+    "sha256": "83ce0619274beb6fba79a5093722aa19d93f10cb54e2b1ba13926eda1fd152ea"
+  },
+  {
+    "id": "cmb-note",
+    "company": "招商银行",
+    "year": 2024,
+    "title": "东莞证券·招商银行2024年年报点评",
+    "type": "券商研报",
+    "published": "2025-03-26",
+    "url": "https://pdf.dfcfw.com/pdf/H3_AP202503261647763967_1.pdf",
+    "sha256": "c68d47d46f8dbbb5835e90b40fdc3d7797250e7f365119a88428f2720ec90f31"
+  }
+]

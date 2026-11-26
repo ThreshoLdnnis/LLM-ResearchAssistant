@@ -1,0 +1,140 @@
+{
+  "qwen05": {
+    "sha256": "e4f5a42a1c73ed5978e0154a69ff96878dc6d82477c37ada1241a3eed6a3f843",
+    "rows": [
+      {
+        "id": "a01",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "把总派息金额填入每股问题。"
+      },
+      {
+        "id": "a02",
+        "correct": 1,
+        "faithful": [
+          1
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "数值正确，但选择的引文没有户数。"
+      },
+      {
+        "id": "a03",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "把覆盖率百分比作为平均天数。"
+      },
+      {
+        "id": "a04",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "把另一个降幅当作存款成本环比变化。"
+      },
+      {
+        "id": "a05",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "对未提供的信息作确定否定，没有说明证据不足。"
+      },
+      {
+        "id": "a06",
+        "correct": 0,
+        "faithful": [],
+        "citation": [],
+        "reason": "输出不符合 JSON 结构，未产生可展示论断。"
+      }
+    ]
+  },
+  "qwen15": {
+    "sha256": "c8c8439d7709396fec5d5ad05f7c30d66fca71d4a1e91c87b07621b18847acc1",
+    "rows": [
+      {
+        "id": "a01",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "把总派息金额填入每股问题。"
+      },
+      {
+        "id": "a02",
+        "correct": 1,
+        "faithful": [
+          1
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "数值正确，但选择的引文没有户数。"
+      },
+      {
+        "id": "a03",
+        "correct": 1,
+        "faithful": [
+          1
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "天数正确，引文只有注释标记。"
+      },
+      {
+        "id": "a04",
+        "correct": 1,
+        "faithful": [
+          1
+        ],
+        "citation": [
+          1
+        ],
+        "reason": "题干已给单位，数值14正确，引文明确包含第四季度存款成本及14个基点。"
+      },
+      {
+        "id": "a05",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "对未提供的信息作确定否定，没有说明证据不足。"
+      },
+      {
+        "id": "a06",
+        "correct": 0,
+        "faithful": [
+          0
+        ],
+        "citation": [
+          0
+        ],
+        "reason": "混用集团净利润与归母净利润，所引文本只有表头。"
+      }
+    ]
+  }
+}

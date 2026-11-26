@@ -1,0 +1,180 @@
+[
+  {
+    "id": "a01",
+    "generation": "qwen05",
+    "status": "answered",
+    "latency_ms": 6341.66,
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 1158,
+      "total_tokens": 1184,
+      "prompt_tokens_details": {
+        "cached_tokens": 3
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "人民币504.40 亿元（含税）",
+        "doc": "cmb-div",
+        "page": 2,
+        "key": "cmb-div/p2/c1",
+        "quote_sha256": "bf102266b5229ff6f77d874d388a08fbead27c1e6714ba88f7ea3a0f0966f9ee"
+      }
+    ],
+    "retrieved": [
+      "cmb-div/p2/c1",
+      "cmb-div/p1/c2",
+      "cmb-div/p2/c3",
+      "cmb-div/p1/c1"
+    ]
+  },
+  {
+    "id": "a02",
+    "generation": "qwen05",
+    "status": "answered",
+    "latency_ms": 5582.42,
+    "usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 1203,
+      "total_tokens": 1219,
+      "prompt_tokens_details": {
+        "cached_tokens": 89
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "25户",
+        "doc": "cmb-q324",
+        "page": 5,
+        "key": "cmb-q324/p5/c1",
+        "quote_sha256": "2e1e854dc22131729547ffbba2622d69a009cff510957b93595ed2e8a8602b72"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p5/c1",
+      "cmb-fy24/p8/c1",
+      "cmb-q324/p3/c3",
+      "cmb-fy24/p6/c3"
+    ]
+  },
+  {
+    "id": "a03",
+    "generation": "qwen05",
+    "status": "answered",
+    "latency_ms": 7125.96,
+    "usage": {
+      "completion_tokens": 20,
+      "prompt_tokens": 1473,
+      "total_tokens": 1493,
+      "prompt_tokens_details": {
+        "cached_tokens": 98
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "170.64%",
+        "doc": "cmb-q324",
+        "page": 27,
+        "key": "cmb-q324/p27/c1",
+        "quote_sha256": "2e1e854dc22131729547ffbba2622d69a009cff510957b93595ed2e8a8602b72"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p27/c1",
+      "cmb-q324/p27/c3",
+      "cmb-q324/p3/c3",
+      "cmb-fy24/p6/c1"
+    ]
+  },
+  {
+    "id": "a04",
+    "generation": "qwen05",
+    "status": "answered",
+    "latency_ms": 6039.49,
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 1226,
+      "total_tokens": 1241,
+      "prompt_tokens_details": {
+        "cached_tokens": 84
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "17",
+        "doc": "cmb-note",
+        "page": 1,
+        "key": "cmb-note/p1/c4",
+        "quote_sha256": "f6e929fdf02b9fe666824a2cedb39a0f4b94590fb81b59cbaeaafe14b83a6ac4"
+      }
+    ],
+    "retrieved": [
+      "cmb-note/p1/c4",
+      "cmb-note/p1/c3",
+      "cmb-note/p1/c5",
+      "cmb-note/p1/c2"
+    ]
+  },
+  {
+    "id": "a05",
+    "generation": "qwen05",
+    "status": "answered",
+    "latency_ms": 4359.79,
+    "usage": {
+      "completion_tokens": 14,
+      "prompt_tokens": 917,
+      "total_tokens": 931,
+      "prompt_tokens_details": {
+        "cached_tokens": 84
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [
+      {
+        "answer": "否",
+        "doc": "cmb-q324",
+        "page": 1,
+        "key": "cmb-q324/p1/c2",
+        "quote_sha256": "71fa57bd6fa493e1a2a495bd40e7cf08cfdc71667a88b4901008d926eb5f7751"
+      }
+    ],
+    "retrieved": [
+      "cmb-q324/p1/c2",
+      "cmb-q324/p24/c3",
+      "cmb-q324/p22/c3",
+      "cmb-fy24/p2/c2"
+    ]
+  },
+  {
+    "id": "a06",
+    "generation": "qwen05",
+    "status": "invalid_model_output",
+    "latency_ms": 7731.34,
+    "usage": {
+      "completion_tokens": 350,
+      "prompt_tokens": 454,
+      "total_tokens": 804,
+      "prompt_tokens_details": {
+        "cached_tokens": 88
+      }
+    },
+    "api_cost_usd": 0.0,
+    "rejected_claims": 0,
+    "claims": [],
+    "retrieved": [
+      "cmb-fy24/p3/c7",
+      "cmb-fy24/p3/c8",
+      "cmb-fy24/p9/c5",
+      "cmb-fy24/p9/c6"
+    ]
+  }
+]
