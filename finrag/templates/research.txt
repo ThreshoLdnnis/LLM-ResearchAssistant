@@ -1,0 +1,34 @@
+{{ config.PLATFORM_NAME }} · 研究记录
+{{ run.question }}
+{{ run.created }} · {{ status_labels[r.status] }}
+
+资料范围　{% if run.selected and run.sources.get(run.selected) %}{{run.sources[run.selected].company}} · {{run.sources[run.selected].title}}{% else %}查询时的全部 {{run.library_count}} 份文档{% endif %}
+处理方式　{{'同口径年度同比计算' if r.calculation else mode_labels.get(run.mode,run.mode) }}
+生成模式　{{r.generation}}
+{% if r.calculation %}{% set c=r.calculation %}{% if c.reason %}
+未能计算　{{c.reason}}
+{% else %}
+计算结果　{{c.company}} · {{c.scope}} · {{c.label}} · {{c.current.year}} 年同比 {{'%+.2f'|format(c.change)}}%
+算式　（{{c.current.value}} − {{c.previous.value}}）÷ {{c.previous.value}} × 100%
+{% for row in [c.current,c.previous] %}{{row.year}} 年　{{row.value}} {{row.currency}} {{row.unit}}
+{% for page in row.pages %}原文　{{url_for('pdf',doc=c.doc,_external=True)}}#page={{page}}
+{% endfor %}{% endfor %}{% endif %}{% endif %}
+{% if r.claims %}模型草稿
+{% for c in r.claims %}{{c.answer}}
+引文　{{c.quote}}
+数字核对　{{c.numeric_check}}
+出处　{{url_for('pdf',doc=c.doc,_external=True)}}#page={{c.page}}
+
+{% endfor %}{% endif %}{% if r.hits %}检索原文
+{% for h in r.hits %}
+{{h.title}} · PDF 第 {{h.page}} 页
+{{h.text}}
+{{url_for('pdf',doc=h.doc,_external=True)}}#page={{h.page}}
+{% endfor %}
+原文相关性与引文是否支持结论需要分别核对。
+{% endif %}
+文档版本
+{% for id,d in run.sources.items() %}{{d.company or ''}} · {{d.title}} · 披露日期 {{d.published or '待核'}}
+SHA-256　{{d.sha256}}
+{% if d.url %}公开来源　{{d.url}}{% endif %}
+{% endfor %}

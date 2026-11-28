@@ -1,0 +1,22 @@
+<section class="card" aria-labelledby="upload-heading">
+  <h2 id="upload-heading">上传研究文档</h2>
+  <form id="upload-form" method="post" action="/upload" enctype="multipart/form-data">
+    <label for="pdf-files">选择 PDF（可多选）</label>
+    <input id="pdf-files" name="file" type="file" accept=".pdf,application/pdf" multiple required>
+    <p><button id="upload-submit">解析并入库</button></p>
+    <details id="manual-fields">
+      <summary>手动补充信息（选填）</summary>
+      <label>文档标题<input name="title"></label>
+      <label>上市公司<input name="company"></label>
+      <label>报告年度<input name="year" type="number" min="1900" max="2200"></label>
+      <label>文档类型<select name="type"><option value="">自动识别</option>
+        {% for t in ['年报','年报摘要','半年报','季报','公告','券商研报'] %}<option>{{t}}</option>{% endfor %}
+      </select></label>
+      <label>发布日期<input name="published" type="date"></label>
+    </details>
+  </form>
+  <p id="upload-progress" role="status" hidden></p>
+  <ul id="upload-results" hidden></ul>
+  <a id="open-library" class="text-link" href="/library" hidden>查看已入库文档</a>
+</section>
+<script src="{{ url_for('static', filename='upload.js') }}" defer></script>

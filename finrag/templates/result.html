@@ -1,0 +1,20 @@
+<div class="page-heading"><div><a class="back" href="/history">返回研究记录</a><h1 class="question-title">{{ run.question }}</h1><p>{{ run.created[:16]|replace('T',' ') }} · {{ status_labels[result.status] }}</p></div><a class="secondary" href="/research/{{run.id}}/export">{{icon('download')}} 导出记录</a></div>
+<section class="panel">
+  {% if result.calculation %}<h2>{{status_labels[result.status]}}</h2>{% include "calculation.html" %}
+  {% elif result.claims %}<h2>模型草稿</h2>{% for c in result.claims %}
+    <article class="claim"><h3>{{c.answer}}</h3><small>{{c.numeric_check}}</small><blockquote>{{c.quote}}</blockquote>
+      <a href="/pdf/{{c.doc}}#page={{c.page}}" target="_blank">{{run.sources[c.doc].company}} · {{run.sources[c.doc].title}} · 第 {{c.page}} 页</a></article>
+    {% endfor %}
+  {% elif result.hits %}<h2>{{'模型未生成可用草稿' if result.status in ['insufficient','invalid_model_output'] else '原文检索结果'}}</h2><p>检索到 {{result.hits|length}} 段相关原文，请按页核对。</p>
+  {% else %}<h2>证据不足</h2><p>请调整检索范围，或补充包含该信息的报告。</p>{% endif %}
+</section>
+{% if result.hits %}<section class="sources"><h2>命中原文</h2>{% for h in result.hits %}<details class="excerpt" {% if loop.first %}open{% endif %}>
+  <summary>{{run.sources[h.doc].company or ''}} · {{h.title}} <small>第 {{h.page}} 页</small></summary>
+  <pre>{{h.text}}</pre><a href="/pdf/{{h.doc}}#page={{h.page}}" target="_blank">打开原页 {{icon('arrow-up-right')}}</a></details>{% endfor %}</section>{% endif %}
+<details class="audit"><summary>查看本次查询依据</summary><dl>
+  <dt>资料范围</dt><dd>{% if run.selected and run.sources.get(run.selected) %}{{run.sources[run.selected].company}} · {{run.sources[run.selected].title}}{% else %}查询时的全部 {{run.library_count}} 份文档{% endif %}</dd>
+  <dt>处理方式</dt><dd>{{'同口径年度数据校验与同比计算' if result.calculation else mode_labels.get(run.mode,run.mode)}}{% if result.generation not in ['off','本地计算'] %} · {{result.generation}}{% endif %}</dd>
+  <dt>核对情况</dt><dd>{% if result.calculation and not result.calculation.reason %}两期金额来自同一份报告，年度、主体、币种和单位已对齐。{% elif result.calculation %}{{result.calculation.reason}}{% elif result.claims %}数字核查仅检查引文中是否出现相应数值。含义及口径仍需回到原页确认。{% else %}命中表示文字相关，能否支持结论需要阅读原页。{% endif %}</dd>
+  <dt>查询耗时</dt><dd>{{result.latency_ms}} ms{% if result.rejected_claims %} · {{result.rejected_claims}} 条草稿未通过引文格式检查{% endif %}</dd>
+</dl></details>
+<a class="text-link" href="/">继续研究 {{icon('chevron-right')}}</a>

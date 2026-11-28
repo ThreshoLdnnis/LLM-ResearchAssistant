@@ -1,0 +1,13 @@
+<form class="composer" method="post" action="/ask" id="ask-form">
+  <label class="sr" for="q">研究问题</label><textarea name="question" id="q" maxlength="2000" required placeholder="输入公司、报告期和你想核实的问题…">{{q or ''}}</textarea>
+  <div class="composer-bar">
+    <label class="scope">{{icon('folder-open')}}<span class="sr">检索范围</span><select id="doc" name="doc"><option value="">全部文档</option>{% for d in docs %}<option value="{{d.id}}" {% if selected==d.id %}selected{% endif %}>{{d.company or '公司待核'}} · {{d.title}}</option>{% endfor %}</select></label>
+    <button class="option-toggle" type="button" aria-label="检索设置" aria-expanded="false" aria-controls="query-options">{{icon('sliders-horizontal')}}<span>检索设置</span></button>
+    <button class="send" id="send" aria-label="提交研究问题">{{icon('arrow-up')}}</button>
+  </div>
+  <div class="query-options" id="query-options">
+    <label>检索方式 <select name="mode" id="mode">{% for m in modes %}<option value="{{m}}" {% if (selected_mode or ('hybrid' if dense else 'bm25'))==m %}selected{% endif %} {% if not dense and m!='bm25' %}disabled{% endif %}>{{mode_labels[m]}}</option>{% endfor %}</select></label>
+    <label class="check"><input name="generate" type="checkbox" {% if generate %}checked{% endif %}>用已配置的模型生成草稿</label>
+  </div>
+  <p id="ask-progress" class="busy" role="status" hidden>正在查询资料…</p>
+</form>

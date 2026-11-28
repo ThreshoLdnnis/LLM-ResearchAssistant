@@ -1,8 +1,7 @@
 import argparse
 import json
 from pathlib import Path
-from .answer import ask
-from .library import engine, records
+from .library import query_library, records
 from .search import MODES
 from .store import documents, download_samples, ingest
 
@@ -46,7 +45,7 @@ def main():
     elif args.cmd=="add":
         emit(ingest(args.file.read_bytes(),{k:getattr(args,k) for k in ("title","company","type","published","year")}))
     elif args.cmd=="ask":
-        emit(ask(engine(strategy=args.chunking),args.question,args.mode,args.generate,args.doc,args.k))
+        emit(query_library(args.question,args.mode,args.generate,args.doc,args.k,args.chunking))
     elif args.cmd=="series":
         from .series import panel
         emit(panel(args.doc,args.metrics))

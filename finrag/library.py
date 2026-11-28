@@ -15,6 +15,20 @@ def engine(database=DB, strategy="structure"):
     return _engine(database,state,strategy)
 
 
+def query_library(question, mode="bm25", generate=False, allowed=None, k=5, strategy="structure", database=DB):
+    from time import perf_counter
+    from .answer import ask
+    from .series import annual_yoy
+    started = perf_counter()
+    if "同比" in question:
+        calculation = annual_yoy(question, documents(database), allowed, database)
+        if calculation is not None:
+            return dict(status="insufficient" if "reason" in calculation else "calculated",
+                        calculation=calculation, claims=[], hits=[], usage=None, api_cost_usd=0,
+                        rejected_claims=0, generation="本地计算", latency_ms=round((perf_counter()-started)*1000, 2))
+    return ask(engine(database, strategy), question, mode, generate, allowed, k)
+
+
 def records(doc=None, kind="financial", database=DB):
     for meta,page,layout in pages(database):
         if doc and meta["id"] != doc:

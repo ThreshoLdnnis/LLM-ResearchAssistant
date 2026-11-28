@@ -1,0 +1,19 @@
+{% set c = result.calculation %}
+{% if c.reason %}
+<p>{{ c.reason }}</p>
+{% else %}
+{% macro amount(row) -%}
+  {{ "{:,}".format(row.value|int if row.value == row.value|int else row.value) }}
+{%- endmacro %}
+<article class="card">
+  <h3>{{ c.company }} · {{ c.current.year }} 年 · {{ c.scope }} · {{ c.label }}</h3>
+  <p><strong>同比 {{ "%+.2f"|format(c.change) }}%</strong></p>
+  <p>（{{ amount(c.current) }} − {{ amount(c.previous) }}）÷ {{ amount(c.previous) }} × 100%</p>
+  <p class="meta">{{ c.title }} · {{ c.scope }}口径</p>
+  {% for row in [c.current, c.previous] %}
+  <div>{{ row.year }} 年 · {{ amount(row) }} {{ '人民币' if row.currency == 'CNY' else row.currency }}{{ row.unit }}
+    {% for page in row.pages %}<a href="/pdf/{{ c.doc }}#page={{ page }}" target="_blank">PDF 第 {{ page }} 页</a>{% endfor %}
+  </div>
+  {% endfor %}
+</article>
+{% endif %}

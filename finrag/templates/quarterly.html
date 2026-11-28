@@ -1,0 +1,20 @@
+<section class="card">
+  <h2>单季与累计披露</h2>
+  {% for label, group in quarter_rows|groupby("label") %}
+    <div class="doc">
+      <h3>{{ label }}</h3>
+      {% for row in group %}
+        <p>{{ row.period }}{% if row.period_label %}（{{ row.period_label }}）{% endif %}{% if row.scope %} · {{ row.scope }}{% endif %}<br>
+          {% if row.value is none %}<strong>原表为横线</strong>
+          {% else %}<strong>{{ "{:,}".format(row.value|int if row.value == row.value|int else row.value) }} {{ row.unit }}</strong>{% endif %}
+          {% if row.reported_yoy_pct is defined %} · 原表同比
+            {% if row.reported_yoy_pct is none %}—{% else %}{{ "%+.2f"|format(row.reported_yoy_pct) }}%{% endif %}
+          {% endif %}
+          · <a href="/pdf/{{ row.doc }}#page={{ row.page }}" target="_blank">第 {{ row.page }} 页</a>
+        </p>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>暂未提取到期间明确的季度表格数据。</p>
+  {% endfor %}
+</section>

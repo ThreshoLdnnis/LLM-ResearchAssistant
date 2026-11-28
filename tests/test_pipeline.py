@@ -13,6 +13,23 @@ META=dict(id="example",company="样例",title="年度报告",type="年报",year=
 
 
 class PipelineTests(unittest.TestCase):
+    def test_parallel_annual_statement(self):
+        layout = ("2024年度合并及公司利润表\n金额单位为人民币千元\n"
+                  "项目  附注  2024 年度  2023年度  2024年度  2023年度\n"
+                  "公司  公司  合并  合并\n"
+                  "一、营业总收入  25  20  99  98\n"
+                  "其中：营业收入  十八(3)  23  18  90  82\n"
+                  "归属于母公司股东的\n净利润  -  (2)  9  8")
+        rows = financial(META, 11, layout)
+        self.assertEqual([(r["scope"], r["period"], r["value"]) for r in rows if r["metric"]=="revenue"],
+                         [("母公司","2024",23),("母公司","2023",18),("集团","2024",90),("集团","2023",82)])
+        profits = [r for r in rows if r["metric"]=="parent_profit"]
+        self.assertEqual([r["value"] for r in profits], [-2,9,8])
+        self.assertTrue(all(r["currency"]=="CNY" and r["unit"]=="千元" and r["page"]==11 for r in rows))
+        self.assertIn("归属于母公司股东的\n净利润", profits[0]["quote"])
+        self.assertEqual(financial(META, 11, layout.replace("公司  公司  合并  合并","合并  公司")), [])
+        self.assertEqual(financial(META, 11, layout, tables=False), [])
+
     def test_period_order_and_changes(self):
         layout="本集团主要会计数据\n（人民币百万元）  2024年  2023年  增减(%)  2022年\n净利润  104  100  4  (20)"
         rows=financial(META,1,layout)
