@@ -1,0 +1,1547 @@
+{
+  "document_count": 30,
+  "page_count": 4764,
+  "text_pages": 4755,
+  "annual_status": {
+    "insufficient": 27,
+    "calculated": 27
+  },
+  "documents": [
+    {
+      "company": "招商银行",
+      "year": 2022,
+      "kind": "年报",
+      "split": "开发",
+      "title": "招商银行股份有限公司2022年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-03-25/1216221326.PDF",
+      "sha256": "9a74951387b3792dc4080ad4d3b03a13b2cc0db91548c15cd193b4a41ae0d051",
+      "pages": 370,
+      "text_pages": 363,
+      "review_pages": [
+        1,
+        15,
+        20,
+        76,
+        85,
+        117,
+        124,
+        132
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 15.0848,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 138012.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              267
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 119922.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              267
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 213.1828,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 570143.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              147
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 182048.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              147
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "招商银行",
+      "year": 2023,
+      "kind": "年报",
+      "split": "开发",
+      "title": "招商银行股份有限公司2023年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-03-26/1219403503.PDF",
+      "sha256": "948a390b579a8d46f281d3f88a346b4388f1bb6b82a90db61d5cd48b4627598a",
+      "pages": 362,
+      "text_pages": 362,
+      "review_pages": [
+        1,
+        362
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": -1.6416,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 339123.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 344783.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 6.2241,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 146602.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15,
+              20,
+              258
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 138012.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15,
+              20,
+              258
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": -37.2521,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 357753.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15,
+              140
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 570143.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              15,
+              140
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "招商银行",
+      "year": 2024,
+      "kind": "年报",
+      "split": "开发",
+      "title": "招商银行股份有限公司2024年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-03-26/1222895154.PDF",
+      "sha256": "44a8759c94e1ba92f1d96897ca3778592d9a7eb33b53420c19268f0b140d81c3",
+      "pages": 362,
+      "text_pages": 362,
+      "review_pages": [
+        1,
+        82,
+        362
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": -0.4821,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 337488.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 339123.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 1.2203,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 148391.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14,
+              19,
+              258
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 146602.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14,
+              19,
+              258
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 24.953,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 447023.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14,
+              142
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 357753.0,
+            "unit": "百万元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              14,
+              142
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "招商银行",
+      "year": 2024,
+      "kind": "季报",
+      "split": "开发",
+      "title": "招商银行股份有限公司2024年第三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-30/1221556764.PDF",
+      "sha256": "8403202b28ac3d4e8039bea167996776115bb8a41bdf98ef2291c83d3a149840",
+      "pages": 27,
+      "text_pages": 27,
+      "review_pages": [
+        2
+      ],
+      "quarter_observations": [
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": "集团",
+          "period": "2024年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 287233.0,
+          "reported_yoy_pct": null,
+          "page": 3
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": "集团",
+          "period": "2023年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 53648.0,
+          "reported_yoy_pct": null,
+          "page": 3
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": "集团",
+          "period": "2024年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 287233.0,
+          "reported_yoy_pct": null,
+          "page": 23
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": "集团",
+          "period": "2023年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 53648.0,
+          "reported_yoy_pct": null,
+          "page": 23
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 224607.0,
+          "reported_yoy_pct": null,
+          "page": 25
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": null,
+          "period": "2023年1-9月",
+          "period_kind": null,
+          "unit": "百万元",
+          "currency": "CNY",
+          "value": 31891.0,
+          "reported_yoy_pct": null,
+          "page": 25
+        }
+      ],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          3,
+          13,
+          4
+        ]
+      }
+    },
+    {
+      "company": "招商银行",
+      "year": 2024,
+      "kind": "公告",
+      "split": "开发",
+      "title": "招商银行股份有限公司2024年年度A股分红派息实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-07-04/1224071313.PDF",
+      "sha256": "83ce0619274beb6fba79a5093722aa19d93f10cb54e2b1ba13926eda1fd152ea",
+      "pages": 3,
+      "text_pages": 3,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "company": "兴业银行",
+      "year": 2022,
+      "kind": "年报",
+      "split": "留出",
+      "title": "兴业银行2022年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-03-31/1216279418.PDF",
+      "sha256": "de9dfb0555c2ec136b58decd07099c7ad68b1167a6c7c671bb2cb1f8bcb60776",
+      "pages": 342,
+      "text_pages": 342,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "兴业银行",
+      "year": 2023,
+      "kind": "年报",
+      "split": "留出",
+      "title": "兴业银行2023年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-03-29/1219445697.PDF",
+      "sha256": "296ce7e3f505668068985d4771a7b7ec88ba6bfc8a9a312cbdad67f98bae3c1e",
+      "pages": 379,
+      "text_pages": 379,
+      "review_pages": [
+        1
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "兴业银行",
+      "year": 2024,
+      "kind": "年报",
+      "split": "留出",
+      "title": "兴业银行2024年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-03-28/1222927176.PDF",
+      "sha256": "b7784a8dd0b6b2798683c9db9ea5cb129eabd30f0352f0cce080bb8d06fc17b8",
+      "pages": 388,
+      "text_pages": 386,
+      "review_pages": [
+        1,
+        6,
+        10,
+        388
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "兴业银行",
+      "year": 2024,
+      "kind": "季报",
+      "split": "留出",
+      "title": "兴业银行2024年第三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-31/1221575449.PDF",
+      "sha256": "ca884c5145531d3a3c6efb11e407a2bc53d55ea47d534e0d76fbcc3aefc52fe8",
+      "pages": 19,
+      "text_pages": 19,
+      "review_pages": [],
+      "quarter_observations": [],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          1,
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "company": "兴业银行",
+      "year": 2024,
+      "kind": "公告",
+      "split": "留出",
+      "title": "兴业银行2024年年度A股权益分派实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-06-16/1223880096.PDF",
+      "sha256": "1024fc851d41891d6c9fb080e1185ef29e931b3113fd8a598921f904b292f024",
+      "pages": 4,
+      "text_pages": 4,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "company": "美的集团",
+      "year": 2022,
+      "kind": "年报",
+      "split": "开发",
+      "title": "2022年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-29/1216695045.PDF",
+      "sha256": "444a83cb76f66242b15c2a83796312b0aa618dc90e280702a0b93fa7aac80688",
+      "pages": 277,
+      "text_pages": 277,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 0.7867,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 343917531.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              153
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 341233208.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              153
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 3.4292,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 29553507.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              153
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 28573650.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              153
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": -1.2364,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 34657828.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              155
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 35091704.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              155
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "美的集团",
+      "year": 2023,
+      "kind": "年报",
+      "split": "开发",
+      "title": "2023年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-03-28/1219429374.PDF",
+      "sha256": "22f4915d91ada74a37eab8d074aef4c15420f3b1a8b5f5bd5777c00f97d58b86",
+      "pages": 291,
+      "text_pages": 291,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 8.1763,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 372037280.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              161
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 343917531.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              161
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 14.0979,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 33719935.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              161
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 29553507.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              161
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 67.0694,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 57902611.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              163
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 34657828.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              163
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "美的集团",
+      "year": 2024,
+      "kind": "年报",
+      "split": "开发",
+      "title": "2024年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222951181.PDF",
+      "sha256": "b17a9b9b84bca1d2a4e4a3cadc5dd5ba5c85e3f1fd2d758acd3315b5b040ecd9",
+      "pages": 295,
+      "text_pages": 295,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 9.4378,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 407149600.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              158
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 372037280.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              158
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 14.2862,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 38537237.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              158
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 33719935.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              158
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 4.5058,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 60511572.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              160
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 57902611.0,
+            "unit": "千元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              160
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "美的集团",
+      "year": 2024,
+      "kind": "季报",
+      "split": "开发",
+      "title": "2024年三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-31/1221570980.PDF",
+      "sha256": "684d66248c30b0d9f2ab1bdf3f85338ef48b6ede0b6ff0725b405ed82a32c51f",
+      "pages": 13,
+      "text_pages": 13,
+      "review_pages": [],
+      "quarter_observations": [
+        {
+          "metric": "revenue",
+          "label": "营业收入",
+          "scope": null,
+          "period": "2024年7-9月",
+          "period_kind": "quarter",
+          "unit": "千元",
+          "currency": null,
+          "value": 101700575.0,
+          "reported_yoy_pct": 8.05,
+          "page": 2
+        },
+        {
+          "metric": "revenue",
+          "label": "营业收入",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": "year_to_date",
+          "unit": "千元",
+          "currency": null,
+          "value": 318974661.0,
+          "reported_yoy_pct": 9.57,
+          "page": 2
+        },
+        {
+          "metric": "parent_profit",
+          "label": "归属于上市公司股东的净利润",
+          "scope": null,
+          "period": "2024年7-9月",
+          "period_kind": "quarter",
+          "unit": "千元",
+          "currency": null,
+          "value": 10894938.0,
+          "reported_yoy_pct": 14.86,
+          "page": 2
+        },
+        {
+          "metric": "parent_profit",
+          "label": "归属于上市公司股东的净利润",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": "year_to_date",
+          "unit": "千元",
+          "currency": null,
+          "value": 31699114.0,
+          "reported_yoy_pct": 14.37,
+          "page": 2
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": null,
+          "period": "2024年7-9月",
+          "period_kind": "quarter",
+          "unit": "千元",
+          "currency": null,
+          "value": null,
+          "reported_yoy_pct": null,
+          "page": 2
+        },
+        {
+          "metric": "operating_cash_flow",
+          "label": "经营活动产生的现金流量净额",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": "year_to_date",
+          "unit": "千元",
+          "currency": null,
+          "value": 60263681.0,
+          "reported_yoy_pct": 34.56,
+          "page": 2
+        }
+      ],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "company": "美的集团",
+      "year": 2024,
+      "kind": "公告",
+      "split": "开发",
+      "title": "2024年度利润分配实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-06-06/1223787314.PDF",
+      "sha256": "d9bb47f27deb4b2eb3fce504509d826c2fa6df3f17664feab24b5e0e2ddfbe3c",
+      "pages": 3,
+      "text_pages": 3,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "company": "格力电器",
+      "year": 2022,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2022年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-29/1216702261.PDF",
+      "sha256": "7cfc80c2badbf4cd74c5adc080d5072b02cd6c700b04fa7ca0ac44cb8b8fe987",
+      "pages": 232,
+      "text_pages": 232,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "两期金额、币种、单位或比较基数未通过校验，无法计算同比。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "两期金额、币种、单位或比较基数未通过校验，无法计算同比。"
+        }
+      }
+    },
+    {
+      "company": "格力电器",
+      "year": 2023,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2023年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-30/1219928418.PDF",
+      "sha256": "32ebc475a2291ce4f1b5c1a9f9da55227e03192f07e75041e976c29d213ec8aa",
+      "pages": 249,
+      "text_pages": 249,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 18.4063,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 29017387604.18,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              116
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 24506623782.46,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              116
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 96.7266,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 56398426354.17,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              117
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 28668435921.27,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              117
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "格力电器",
+      "year": 2024,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2024年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-28/1223330631.PDF",
+      "sha256": "c7184706caf5f57c04a795990967cfc4f4253024e02f8bdaffe2b260df2c6006",
+      "pages": 248,
+      "text_pages": 248,
+      "review_pages": [
+        46
+      ],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": -47.9254,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 29369250570.66,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              114
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 56398426354.17,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              114
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "格力电器",
+      "year": 2024,
+      "kind": "季报",
+      "split": "留出",
+      "title": "2024年三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-31/1221573963.PDF",
+      "sha256": "5324288607e6c3d0654484dcd11991b2990dd9ea6d2ed2182462ee209976d600",
+      "pages": 10,
+      "text_pages": 10,
+      "review_pages": [],
+      "quarter_observations": [],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "company": "格力电器",
+      "year": 2024,
+      "kind": "公告",
+      "split": "留出",
+      "title": "2024年年度权益分派实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-08-22/1224534765.PDF",
+      "sha256": "8d4b488560f9d3ec81c9349757cda9d9bdee4cdbbecb97911761e2f6a93b4b64",
+      "pages": 3,
+      "text_pages": 3,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "company": "贵州茅台",
+      "year": 2022,
+      "kind": "年报",
+      "split": "开发",
+      "title": "贵州茅台2022年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-03-31/1216281757.PDF",
+      "sha256": "de394171306b9f2c7d79f54990de2a9e9c99feb54413150180179e24f0d83358",
+      "pages": 127,
+      "text_pages": 127,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 16.8657,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 124099843771.99,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              58
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 106190154843.76,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              58
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": -42.6841,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2022",
+            "value": 36698595830.03,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              62
+            ]
+          },
+          "previous": {
+            "year": "2021",
+            "value": 64028676147.37,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              62
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "贵州茅台",
+      "year": 2023,
+      "kind": "年报",
+      "split": "开发",
+      "title": "贵州茅台2023年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-03/1219506510.PDF",
+      "sha256": "2125ff97a452ea79b0d784e2432f7d224b6aecc330b644b593477d69e22f4ed1",
+      "pages": 143,
+      "text_pages": 143,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 19.0119,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 147693604994.14,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              63
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 124099843771.99,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              63
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 81.4599,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2023",
+            "value": 66593247721.09,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              67
+            ]
+          },
+          "previous": {
+            "year": "2022",
+            "value": 36698595830.03,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              67
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "贵州茅台",
+      "year": 2024,
+      "kind": "年报",
+      "split": "开发",
+      "title": "贵州茅台2024年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+      "pages": 143,
+      "text_pages": 143,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "calculated",
+          "change_pct": 15.712,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 170899152276.34,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              63
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 147693604994.14,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              63
+            ]
+          }
+        },
+        "归母净利润": {
+          "status": "calculated",
+          "change_pct": 15.38,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 86228146421.62,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              64
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 74734071550.75,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              64
+            ]
+          }
+        },
+        "经营现金流净额": {
+          "status": "calculated",
+          "change_pct": 38.8484,
+          "reference_amounts_match": true,
+          "reference_yoy_match": true,
+          "current": {
+            "year": "2024",
+            "value": 92463692168.43,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              67
+            ]
+          },
+          "previous": {
+            "year": "2023",
+            "value": 66593247721.09,
+            "unit": "元",
+            "currency": "CNY",
+            "scope": "集团",
+            "pages": [
+              67
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company": "贵州茅台",
+      "year": 2024,
+      "kind": "季报",
+      "split": "开发",
+      "title": "贵州茅台2024年第三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-26/1221523519.PDF",
+      "sha256": "ebeccbbe12b5b1a9dfa5ada16c956cba6fa30a6fb917f95856da16c1a719ce98",
+      "pages": 11,
+      "text_pages": 11,
+      "review_pages": [],
+      "quarter_observations": [],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "company": "贵州茅台",
+      "year": 2024,
+      "kind": "公告",
+      "split": "开发",
+      "title": "贵州茅台2024年年度权益分派实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-06-20/1223934491.PDF",
+      "sha256": "8ff3e6e370c75cece700e5474337c8ecf1adb87b01a1a696bae02fd25982af3b",
+      "pages": 5,
+      "text_pages": 5,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          2,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "company": "五粮液",
+      "year": 2022,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2022年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-29/1216689063.PDF",
+      "sha256": "41240ddcd434c2a3b2c33b4643b031b2007c6e6dcd7a132f7a4d471f00993064",
+      "pages": 147,
+      "text_pages": 147,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "五粮液",
+      "year": 2023,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2023年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-29/1219873658.PDF",
+      "sha256": "1aab0efbe751c145990ac9652c3aff165452ee060bf22a0fe0412996a55e8566",
+      "pages": 150,
+      "text_pages": 150,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "五粮液",
+      "year": 2024,
+      "kind": "年报",
+      "split": "留出",
+      "title": "2024年年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223311527.PDF",
+      "sha256": "b737191a758994a35e9442d46847de771fe48b758feb9a7f35601def922435e7",
+      "pages": 147,
+      "text_pages": 147,
+      "review_pages": [],
+      "annual_yoy": {
+        "营业收入": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "归母净利润": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        },
+        "经营现金流净额": {
+          "status": "insufficient",
+          "reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"
+        }
+      }
+    },
+    {
+      "company": "五粮液",
+      "year": 2024,
+      "kind": "季报",
+      "split": "留出",
+      "title": "2024年三季度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-31/1221573332.PDF",
+      "sha256": "010c025c30ed80af154436ddd317909896215353459375931b30458642674cea",
+      "pages": 11,
+      "text_pages": 11,
+      "review_pages": [],
+      "quarter_observations": [
+        {
+          "metric": "revenue",
+          "label": "营业收入",
+          "scope": null,
+          "period": "2024年7-9月",
+          "period_kind": "quarter",
+          "unit": "元",
+          "currency": null,
+          "value": 17267553533.6,
+          "reported_yoy_pct": 1.39,
+          "page": 1
+        },
+        {
+          "metric": "revenue",
+          "label": "营业收入",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": "year_to_date",
+          "unit": "元",
+          "currency": null,
+          "value": 67915580112.25,
+          "reported_yoy_pct": 8.6,
+          "page": 1
+        },
+        {
+          "metric": "parent_profit",
+          "label": "归属于上市公司股东的净利润",
+          "scope": null,
+          "period": "2024年7-9月",
+          "period_kind": "quarter",
+          "unit": "元",
+          "currency": null,
+          "value": 5873953027.68,
+          "reported_yoy_pct": 1.34,
+          "page": 1
+        },
+        {
+          "metric": "parent_profit",
+          "label": "归属于上市公司股东的净利润",
+          "scope": null,
+          "period": "2024年1-9月",
+          "period_kind": "year_to_date",
+          "unit": "元",
+          "currency": null,
+          "value": 24930782556.55,
+          "reported_yoy_pct": 9.19,
+          "page": 1
+        }
+      ],
+      "retrieval": {
+        "query": "主要会计数据和财务指标 营业收入 本报告期 年初至报告期末",
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "company": "五粮液",
+      "year": 2024,
+      "kind": "公告",
+      "split": "留出",
+      "title": "2024年度分红派息实施公告",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-07-12/1224145916.PDF",
+      "sha256": "08b5821f5451da53395d3f015a1e4649a39ee1105e90aa5f374233ad5170cf76",
+      "pages": 3,
+      "text_pages": 3,
+      "review_pages": [],
+      "retrieval": {
+        "query": "利润分配 每股 每10股 现金红利 含税 股权登记日 除权除息日",
+        "pages": [
+          2,
+          1
+        ]
+      }
+    }
+  ]
+}
