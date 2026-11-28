@@ -30,11 +30,10 @@ def query_library(question, mode="bm25", generate=False, allowed=None, k=5, stra
 
 
 def records(doc=None, kind="financial", database=DB):
-    for meta,page,layout in pages(database):
-        if doc and meta["id"] != doc:
-            continue
+    statement = {}
+    for meta,page,layout in pages(database, doc):
         if kind == "financial":
-            yield from financial(meta,page,layout)
+            yield from financial(meta,page,layout,statement=statement)
         elif kind == "narrative":
             yield from narratives(meta,page,layout)
         elif kind == "rows":

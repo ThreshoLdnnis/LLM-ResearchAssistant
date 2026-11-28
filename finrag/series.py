@@ -59,6 +59,8 @@ def annual_yoy(question, documents, allowed, database):
     candidates = [d for d in documents if d["type"] in {"年报", "年报摘要"}
                   and (not company or d["company"] == company)
                   and (d["id"] in allowed if allowed else str(d["year"]) == year)]
+    if not allowed and any(d["type"] == "年报" for d in candidates):
+        candidates = [d for d in candidates if d["type"] == "年报"]
     if len(candidates) != 1:
         return {"reason": "未能唯一确定出处。请选定一份与公司相符的年报。"}
     doc = candidates[0]
@@ -68,7 +70,7 @@ def annual_yoy(question, documents, allowed, database):
     current = [r for r in rows if r["scope"] == scope and r["year"] == year]
     previous = [r for r in rows if r["scope"] == scope and r["year"] == prior_year]
     if len(current) != 1 or len(previous) != 1:
-        return {"reason": "该报告中缺少唯一可核对的两期同口径金额。"}
+        return {"reason": "系统未能从所选年报中确定两期同口径金额。请核对原表的年份、主体和单位。"}
     now, prior = current[0], previous[0]
     if (not now["currency"] or (now["currency"], now["unit"]) != (prior["currency"], prior["unit"])
             or now["value"] is None or prior["value"] is None or now["change"] is None):

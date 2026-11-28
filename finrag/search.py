@@ -64,6 +64,7 @@ def segments(layout, size=380):
 
 def chunks(rows, strategy="structure", tables=True, size=380):
     result = []
+    statement = {}
     for meta, page, layout in rows:
         if strategy == "fixed":
             flat = " ".join(layout.split())
@@ -88,7 +89,7 @@ def chunks(rows, strategy="structure", tables=True, size=380):
                 texts.append(buffer)
         if tables:
             seen = set()
-            for rec in financial(meta, page, layout):
+            for rec in financial(meta, page, layout, statement=statement):
                 if rec["evidence_type"] == "table" and len(rec["period"])==4 and rec["quote"] not in seen:
                     texts.append(f'{rec["unit"]} · {rec["header"]}\n{rec["quote"]}')
                     seen.add(rec["quote"])

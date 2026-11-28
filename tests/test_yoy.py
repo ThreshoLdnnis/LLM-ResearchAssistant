@@ -17,6 +17,10 @@ class AnnualYoyTests(unittest.TestCase):
         def query(text):
             return annual_yoy(text, [doc], ["sample"], None)
         self.assertEqual(query("样例 2024 年合并营业收入同比增长了多少？")["change"], 10)
+        summary = dict(doc, id="summary", type="年报摘要")
+        text = "样例2024年合并营业收入同比增长多少？"
+        self.assertEqual(annual_yoy(text,[summary,doc],None,None)["doc"], "sample")
+        self.assertEqual(annual_yoy(text,[summary,doc],["summary"],None)["doc"], "summary")
         self.assertEqual(query("2024年母公司营业收入同比增长多少？")["change"], -10)
         self.assertIn("reason", query("其他公司2024年合并营业收入同比增速是多少？"))
         self.assertIsNone(query("样例2024年合并营业收入同比增长的原因是什么？"))

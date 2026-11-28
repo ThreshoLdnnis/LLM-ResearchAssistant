@@ -123,9 +123,12 @@ def documents(database=DB):
         return [json.loads(row[0]) for row in db.execute("SELECT meta FROM documents ORDER BY id")]
 
 
-def pages(database=DB):
+def pages(database=DB, doc=None):
     with connection(database) as db:
-        rows = db.execute("""SELECT d.meta,p.page,p.layout FROM pages p JOIN documents d
-                             ON p.doc=d.id ORDER BY p.doc,p.page""")
+        query = "SELECT d.meta,p.page,p.layout FROM pages p JOIN documents d ON p.doc=d.id"
+        args = () if doc is None else (doc,)
+        if doc is not None:
+            query += " WHERE p.doc=?"
+        rows = db.execute(query + " ORDER BY p.doc,p.page", args)
         return [(json.loads(r[0]), r[1], r[2]) for r in rows]
 

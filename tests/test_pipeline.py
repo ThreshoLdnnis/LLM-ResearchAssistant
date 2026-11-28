@@ -13,6 +13,46 @@ META=dict(id="example",company="样例",title="年度报告",type="年报",year=
 
 
 class PipelineTests(unittest.TestCase):
+    def test_annual_statement_continuation_keeps_header_and_resets_at_boundaries(self):
+        state = {}
+        start = "合并现金流量表\n单位：元 币种：人民币\n项目  附注  2024年度  2023年度"
+        line = "经营活动产生的现金流量净额  3,000.80  2,700.50"
+        financial(META, 11, start, statement=state)
+        rows = financial(META, 12, line + "\n公司负责人：签章", statement=state)
+        self.assertEqual([(r["scope"], r["period"], r["page"], r["value"]) for r in rows],
+                         [("集团","2024",12,3000.8),("集团","2023",12,2700.5)])
+        self.assertEqual(financial(META, 13, line, statement=state), [])
+        financial(META, 11, start, statement=state)
+        self.assertEqual(financial(dict(META, id="other"), 12, line, statement=state), [])
+        financial(META, 11, start, statement=state)
+        self.assertEqual(financial(META, 13, line, statement=state), [])
+        financial(META, 21, start.replace("现金流量表","利润表"), statement=state)
+        profit = "1.归属于母公司股东的净利润（净\n  8,000.65  7,500.90\n亏损以负号填列）"
+        self.assertEqual([r["value"] for r in financial(META,22,profit,statement=state)], [8000.65,7500.9])
+
+    def test_separate_income_statements_align_amounts_and_notes(self):
+        layout = ("合并利润表\n单位：元 币种：人民币\n项目  附注  2024 年度  2023 年度\n"
+                  "一、营业总收入  940.50  880.75\n其中：营业收入  40  910.25  850.50\n"
+                  "母公司利润表\n单位：千元 币种：人民币\n项目  2023年度  2024年度\n"
+                  "一、营业收入  60.50  70.25")
+        rows = financial(META, 9, layout)
+        self.assertEqual([(r["scope"], r["period"], r["value"], r["unit"]) for r in rows],
+                         [("集团","2024",910.25,"元"), ("集团","2023",850.50,"元"),
+                          ("母公司","2023",60.50,"千元"), ("母公司","2024",70.25,"千元")])
+        self.assertTrue(all(r["page"] == 9 and r["currency"] == "CNY" for r in rows))
+        self.assertIn("40", rows[0]["quote"])
+        self.assertIn("2024 年度", rows[0]["header"])
+        self.assertEqual(financial(META, 9, layout, tables=False), [])
+
+    def test_partial_or_ambiguous_revenue_stays_unresolved(self):
+        header = "合并利润表\n单位：元 币种：人民币\n项目  附注  2024年度  2023年度\n"
+        for row in ["其中：营业收入  40  710.00", "其中：营业收入  3.2  710.00",
+                    "一、营业总收入  40  910.00  710.00", "其中：营业收入  40  —  710.00"]:
+            with self.subTest(row=row):
+                self.assertEqual(financial(META, 9, header + row), [])
+        repeated = header.replace("2023年度", "2024年度") + "其中：营业收入  40  910.00  710.00"
+        self.assertEqual(financial(META, 9, repeated), [])
+
     def test_parallel_annual_statement(self):
         layout = ("2024年度合并及公司利润表\n金额单位为人民币千元\n"
                   "项目  附注  2024 年度  2023年度  2024年度  2023年度\n"

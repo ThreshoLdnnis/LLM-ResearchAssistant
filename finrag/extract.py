@@ -49,6 +49,24 @@ def period_columns(line):
 ANNUAL_STATEMENT = re.compile(r"(?:\d{4}年度?)?合并及(?:母)?公司(?:利润表|现金流量表)(?:[（(]续[）)])?$")
 ANNUAL_YEAR = re.compile(r"((?:19|20)\d{2})年(?:度)?")
 STATEMENT_SCOPES = {"合并": "集团", "公司": "母公司", "母公司": "母公司"}
+SINGLE_STATEMENT = re.compile(r"(?:(?:19|20)\d{2}年度?)?(合并|母公司|公司)(利润表|现金流量表)(?:[（(]续[）)])?")
+INCOME_YEARS = re.compile(r"项目(附注)?((?:19|20)\d{2})年度?((?:19|20)\d{2})年度?")
+REVENUE_LINE = re.compile(r"^(?:[一二三四五六七八九十]+、\s*)?(?:其中[：:]\s*)?营业收入\s+(.+)$")
+PARENT_LINE = re.compile(r"^(?:\d+[.、])?归属于母公司股东的净利润(?:[（(]净?亏损以[^）)]*[）)])?(?:\s+(.+))?$")
+CASH_LINE = re.compile(r"^经营活动产生的现金流量净额\s+(.+)$")
+NOTE_REFERENCE = re.compile(r"[一二三四五六七八九十\d]+(?:[（(][一二三四五六七八九十\da-zA-Z]+[）)])*")
+
+
+def statement_cells(text, has_note):
+    cells = text.split()
+    if has_note and len(cells) == 3 and NOTE_REFERENCE.fullmatch(cells[0]):
+        cells = cells[1:]
+    elif has_note and len(cells) == 2 and "," not in cells[0]:
+        # Without a visible note, an ungrouped first number can itself be a note reference.
+        return []
+    if len(cells) != 2 or not all(CELL.fullmatch(c) and not c.endswith("%") for c in cells):
+        return []
+    return cells
 
 
 def parallel_statement(meta, page, lines):
@@ -201,8 +219,14 @@ def quarterly_summary(meta, page, lines):
             break
 
 
-def financial(meta, page, layout, tables=True):
+def financial(meta, page, layout, tables=True, *, statement=None):
     columns, scale, denomination, scope = [], None, None, None
+    title_scope = table_kind = table_years = None
+    table_header = ""
+    if statement and statement.get("next") == (meta["id"], page):
+        title_scope, table_kind, table_years, table_header, scale, denomination = statement["context"]
+    if statement is not None:
+        statement.clear()
     output = []
     lines = layout.splitlines()
     if tables and meta["type"] == "季报" and "年初至报告期末" in "".join(layout.split()):
@@ -210,9 +234,17 @@ def financial(meta, page, layout, tables=True):
     if tables and meta["type"] != "季报" and "合并及" in layout and any(
             ANNUAL_STATEMENT.fullmatch("".join(line.split())) for line in lines):
         output.extend(parallel_statement(meta, page, lines))
-    for line in lines:
+    for index, line in enumerate(lines):
         line = line.strip()
         compact = re.sub(r"\s+", "", line)
+        title = SINGLE_STATEMENT.fullmatch(compact)
+        if title and meta["type"] in {"年报", "年报摘要"}:
+            title_scope, table_kind = STATEMENT_SCOPES[title[1]], title[2]
+            scope = title_scope
+            table_years = scale = denomination = None
+            columns = []
+        elif title_scope and (compact.endswith(("表", "报表附注")) or compact.startswith(("公司负责人", "法定代表人"))):
+            title_scope = table_years = None
         if "本集团" in compact or re.search(r"合并(?:利润|现金流量|资产负债)表",compact):
             scope = "集团"
         if "本公司主要" in compact or "母公司利润表" in compact:
@@ -222,6 +254,11 @@ def financial(meta, page, layout, tables=True):
             scale = unit_match[1]
             denomination = "CNY" if "人民币" in compact else None
         parts = fields(line)
+        if title_scope and (compact.startswith("项目") or len(ANNUAL_YEAR.findall(compact)) >= 2):
+            table_years = INCOME_YEARS.fullmatch(compact)
+            table_header = line
+            if table_years and table_years[2] == table_years[3]:
+                table_years = None
         if len(re.findall(r"(?:19|20)\d{2}年",compact)) >= 2:
             columns = period_columns(line)
             if meta["type"]=="季报" and any(p and len(p)==4 for p in columns):
@@ -231,16 +268,35 @@ def financial(meta, page, layout, tables=True):
             columns = []
         base = {"doc": meta["id"], "page": page, "company": meta["company"], "source_type": meta["type"],
                 "report_year": meta["year"],"published":meta["published"],"scope": scope, "quote": line}
-        if tables and columns and len(parts) == len(columns) + 1 and parts[0] in LABELS:
+        row_columns = columns
+        row_header = line if not columns else header
+        if tables and table_years and title_scope:
+            label, cell_text = None, None
+            if table_kind == "现金流量表" and (match := CASH_LINE.fullmatch(line)):
+                label, cell_text = "经营活动产生的现金流量净额", match[1]
+            elif table_kind == "利润表" and (match := REVENUE_LINE.fullmatch(line)):
+                label, cell_text = "营业收入", match[1]
+            elif table_kind == "利润表" and (match := PARENT_LINE.fullmatch(line)):
+                label, cell_text = "归属于母公司股东的净利润", match[1]
+            elif (table_kind == "利润表" and re.fullmatch(r"(?:\d+[.、])?归属于母公司股东的净利润[（(](?:净|净?亏损以.*)?", compact)
+                  and index + 1 < len(lines)):
+                label, cell_text = "归属于母公司股东的净利润", lines[index + 1].strip()
+                base["quote"] = line + "\n" + cell_text
+            if label:
+                parts = [label, *statement_cells(cell_text or "", bool(table_years[1]))]
+                row_columns = [table_years[2], table_years[3]]
+                row_header = table_header
+                base["scope"] = title_scope
+        if tables and row_columns and len(parts) == len(row_columns) + 1 and parts[0] in LABELS:
             label = parts[0]
             percent = "率" in label
-            for period, cell in zip(columns, parts[1:]):
+            for period, cell in zip(row_columns, parts[1:]):
                 if period is None or not CELL.fullmatch(cell) or not (percent or scale):
                     continue
                 output.append(dict(base, metric=LABELS[label], label=label, period=period,
                                    value=number(cell), unit="%" if percent else scale,
                                    currency=None if percent else denomination,
-                                   evidence_type="table", header=header))
+                                   evidence_type="table", header=row_header))
         elif len(parts) == 1 or "，" in line:
             # Keep period unresolved unless the sentence itself states a period.
             for match in INLINE.finditer(line):
@@ -252,6 +308,9 @@ def financial(meta, page, layout, tables=True):
                                    period=periods[-1] if periods else None, value=number(match[2]),
                                    unit=match[3],currency=None if match[3]=="%" else denomination,
                                    evidence_type="inline"))
+    if statement is not None and title_scope and table_years and denomination:
+        statement.update(next=(meta["id"], page + 1),
+                         context=(title_scope, table_kind, table_years, table_header, scale, denomination))
     return output
 
 
